@@ -68,7 +68,7 @@ def generate_response(model, tokenizer, prompt, max_length=512):
 def chat_interface():
     """Interactive chat interface"""
     
-    model_path = "./final_merged_model"
+    model_path = "./qwen2p5-3b-dapt-sft-merged"  # Hugging Face'den indirilen model
     print("🚀 Loading model for 8GB VRAM...")
     
     try:

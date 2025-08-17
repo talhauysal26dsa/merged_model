@@ -22,13 +22,23 @@ pip install torch transformers accelerate
 
 ## 💻 Kullanım
 
+### Model İndirme
+
+Model'i Hugging Face Hub'dan indirin:
+
+```bash
+# Model'i indir
+git lfs install
+git clone https://huggingface.co/talhauysal26dsa/qwen2p5-3b-dapt-sft-merged
+```
+
 ### 8GB VRAM için Optimize Edilmiş Inference
 
 ```python
 from inference_8gb_optimized import load_model_8gb, generate_response
 
-# Model'i yükleyin
-model, tokenizer = load_model_8gb("./final_merged_model")
+# Model'i yükleyin (indirdikten sonra)
+model, tokenizer = load_model_8gb("./qwen2p5-3b-dapt-sft-merged")
 
 # Chat yapın
 prompt = "Merhaba, nasılsın?"
